@@ -223,5 +223,54 @@ public String updateHospitalDet(String ID, String MOHcode, String Hos_name, Stri
   
 } 
  
+
+public String deleteHospitalDet(String hospitalID) 
+{   
+	 String output = ""; 
+
+ try   
+ {    
+	  Connection con = connect(); 
+
+  if (con == null)    
+  
+  {
+	   return "Error while connecting to the database for deleting.";
+  
+  } 
+
+  // create a prepared statement    
+  String query = "delete from hospital where hospitalID=?"; 
+
+  PreparedStatement preparedStmt = con.prepareStatement(query); 
+
+  // binding values    
+  preparedStmt.setInt(1, Integer.parseInt(hospitalID)); 
+
+  // execute the statement    
+  preparedStmt.execute();    
+  con.close(); 
+
+  //output = "Deleted successfully";   
+  
+	String newHospitals = readHospitalDetails();
+	 output = "{\"status\":\"success\", \"data\": \"" + newHospitals + "\"}"; 
+
+  
+ }   catch (Exception e)   
+ 
+ {    
+	 // output = "Error while deleting the hospital details.";   
+	  output = "{\"status\":\"error\", \"data\":\"Error while deleting the hospital.\"}"; 
+	  System.err.println(e.getMessage());   
+	  
+ } 
+
+ return output;  
+ 
+} 
+
+
+
 	
 }
