@@ -143,4 +143,59 @@ function onHospitalDeleteComplete(response, status)
 }
 
 
+//CLIENTMODEL=========================================================================
+function validateHospitalForm()
+{
+// CODE
+if ($("#mohCode").val().trim() == "")
+ {
+ return "Insert MOH Code.";
+ }
+// NAME
+if ($("#hospitalName").val().trim() == "")
+ {
+ return "Insert Hospital Name.";
+ }
+//PRICE-------------------------------
+if ($("#emailAddress").val().trim() == "")
+ {
+ return "Insert Email Address.";
+ }
+
+//
+if ($("#managerName").val().trim() == "")
+{
+return "Insert Manager Name.";
+}
+
+//
+if ($("#address").val().trim() == "")
+{
+return "Insert Address.";
+}
+
+//
+if ($("#telephoneNo").val().trim() == "")
+{
+return "Insert telephone number.";
+}
+
+// is numerical value
+var tmpTel = $("#telephoneNo").val().trim();
+if (!$.isNumeric(tmpTel))
+ {
+ return "Insert a numerical value for Telephone number.";
+ }
+
+// convert to decimal price
+ //$("#itemPrice").val(parseFloat(tmpPrice).toFixed(2));
+
+ 
+
+
+return true;
+}
+
+
+
 
