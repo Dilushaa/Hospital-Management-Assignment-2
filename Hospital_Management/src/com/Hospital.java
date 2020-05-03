@@ -11,7 +11,7 @@ public class Hospital {
 			Class.forName("com.mysql.jdbc.Driver"); 
 			con= DriverManager.getConnection("jdbc:mysql://127.0.0.1/hospital","root", ""); 
 			
-			//for testing purpose
+			//for testing purposes
 			System.out.print("Successfully connected");
 			
 		} catch (Exception e) {
