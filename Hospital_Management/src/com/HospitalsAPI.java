@@ -1,6 +1,8 @@
 package com;
 
 import java.io.IOException;
+import java.util.Map;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,10 +15,10 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/HospitalsAPI")
 public class HospitalsAPI extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	Hospital hospitalObj = new Hospital();
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+    
     public HospitalsAPI() {
         super();
         // TODO Auto-generated constructor stub
@@ -27,7 +29,9 @@ public class HospitalsAPI extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		//we dont use this method
+		
 	}
 
 	/**
@@ -35,14 +39,31 @@ public class HospitalsAPI extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		String output = hospitalObj.insertHoapitalDet(request.getParameter("mohCode"),
+				   request.getParameter("hospitalName"),
+				   request.getParameter("emailAddress"),
+				   request.getParameter("managerName"),
+				   request.getParameter("address"),
+				   request.getParameter("telephoneNo"));
+
+		response.getWriter().write(output);
 	}
 
 	/**
 	 * @see HttpServlet#doPut(HttpServletRequest, HttpServletResponse)
 	 */
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		Map paras = getParasMap(request);
+		
+		 String output = hospitalObj.updateHospitalDet(paras.get("hidHospitalIDSave").toString(),
+														 paras.get("mohCode").toString(),
+														 paras.get("hospitalName").toString(),
+														 paras.get("emailAddress").toString(),
+														 paras.get("managerName").toString(),
+														 paras.get("address").toString(),
+														 paras.get("telephoneNo").toString());
+		 
+		 response.getWriter().write(output); 
 	}
 
 	/**
