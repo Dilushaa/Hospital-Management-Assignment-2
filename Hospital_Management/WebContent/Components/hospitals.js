@@ -93,3 +93,19 @@ $(document).on("click", ".btnUpdate", function(event)
  $("#telephoneNo").val($(this).closest("tr").find('td:eq(5)').text());
 });
 
+
+//REMOVE=======
+$(document).on("click", ".btnRemove", function(event)
+		{
+			$.ajax(
+			{
+				url : "HospitalsAPI",
+				type : "DELETE",
+				data : "hospitalID=" + $(this).data("hospitalid"),
+				dataType : "text",
+				complete : function(response, status)
+				{
+					onHospitalDeleteComplete(response.responseText, status);
+				}
+			});
+});
