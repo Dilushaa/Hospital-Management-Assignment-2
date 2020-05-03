@@ -81,4 +81,15 @@ function onHospitalSaveComplete(response, status)
 	
 }
 
+//UPDATE==========================================
+$(document).on("click", ".btnUpdate", function(event)
+{
+ $("#hidHospitalIDSave").val($(this).closest("tr").find('#hidHospitalIDUpdate').val());
+ $("#mohCode").val($(this).closest("tr").find('td:eq(0)').text());
+ $("#hospitalName").val($(this).closest("tr").find('td:eq(1)').text());
+ $("#emailAddress").val($(this).closest("tr").find('td:eq(2)').text());
+ $("#managerName").val($(this).closest("tr").find('td:eq(3)').text());
+ $("#address").val($(this).closest("tr").find('td:eq(4)').text());
+ $("#telephoneNo").val($(this).closest("tr").find('td:eq(5)').text());
+});
 
