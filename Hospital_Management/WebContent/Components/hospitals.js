@@ -45,3 +45,40 @@ $(document).on("click", "#btnSave", function(event)
  		});
 
  });
+
+function onHospitalSaveComplete(response, status)
+{
+	if (status == "success")
+	{
+		var resultSet = JSON.parse(response);
+		if (resultSet.status.trim() == "success")
+		{
+			$("#alertSuccess").text("Successfully saved.");
+			$("#alertSuccess").show();
+			$("#divHospitalsGrid").html(resultSet.data);
+		} 
+		else if (resultSet.status.trim() == "error")
+		{
+			$("#alertError").text(resultSet.data);
+			$("#alertError").show();
+		}
+	} 
+	else if (status == "error")
+	{
+		$("#alertError").text("Error while saving.");
+		$("#alertError").show();
+	} 
+	else
+	{
+		$("#alertError").text("Unknown error while saving..");
+		$("#alertError").show();
+	}
+	
+	$("#hidHospitalIDSave").val("");
+	$("#formHospital")[0].reset();
+	
+	//location.reload();
+	
+}
+
+
