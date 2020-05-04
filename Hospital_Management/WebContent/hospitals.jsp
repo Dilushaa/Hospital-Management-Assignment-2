@@ -10,10 +10,12 @@
 <link rel="stylesheet" href="Views/myCss.css">
 <script src="Components/jquery-3.2.1.min.js"></script>
 <script src="Components/hospitals.js"></script>
+
 </head>
 <body>
 
 <div class="container">
+
 	<div class="row">
 		<div class="col-6">
 		<h1 id="head">HOSPITAL MANAGEMENT</h1>

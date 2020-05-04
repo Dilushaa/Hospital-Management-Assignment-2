@@ -178,6 +178,18 @@ if ($("#emailAddress").val().trim() == "")
  }
 
 
+
+		var re = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;	
+		var email = $("#emailAddress").val().trim();
+	
+	if (re.test(email) == false) 
+	{
+		
+		return "Please enter valid email address";
+	
+	}
+
+
 //manager name
 if ($("#managerName").val().trim() == "")
 {
