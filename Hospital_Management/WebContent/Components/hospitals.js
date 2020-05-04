@@ -8,18 +8,6 @@ if ($("#alertSuccess").text().trim() == "")
  $("#alertError").hide();
  
  
- //$('#telephoneNo').blur(function(e) {
-   //  if (validatePhone('telephoneNo')) {
- //        $('#spnPhoneStatus').text('Valid');
-         //$('#spnPhoneStatus').css('color', 'green');
-  //   }
- //    else {
-       //  $('#spnPhoneStatus').text('Invalid');
-         //$('#spnPhoneStatus').css('color', 'red');
- //    }
- //});
- 
- 
  
 });
 
@@ -27,19 +15,19 @@ if ($("#alertSuccess").text().trim() == "")
 //SAVE ============================================
 $(document).on("click", "#btnSave", function(event)
 {
-// Clear alerts---------------------
- $("#alertSuccess").text("");
- $("#alertSuccess").hide();
- $("#alertError").text("");
- $("#alertError").hide();
+		// Clear alerts---------------------
+		 $("#alertSuccess").text("");
+		 $("#alertSuccess").hide();
+		 $("#alertError").text("");
+		 $("#alertError").hide();
  
 //Form validation-------------------
  var status = validateHospitalForm();
  if (status != true)
   {
-  $("#alertError").text(status);
-  $("#alertError").show();
-  return;
+		  $("#alertError").text(status);
+		  $("#alertError").show();
+		  return;
   }
  
  
@@ -92,7 +80,7 @@ function onHospitalSaveComplete(response, status)
 	$("#hidHospitalIDSave").val("");
 	$("#formHospital")[0].reset();
 	
-	//location.reload();
+	
 	
 }
 
