@@ -171,7 +171,7 @@ if ($("#hospitalName").val().trim() == "")
  {
  return "Insert Hospital Name.";
  }
-//PRICE-------------------------------
+//email address-------------------------------
 if ($("#emailAddress").val().trim() == "")
  {
  return "Insert Email Address.";
@@ -204,14 +204,30 @@ if (!$.isNumeric(tmpTel))
 
 
 
-//if($("#telephoneNo").length < 10 || $("#telephoneNo").length > 10)
+
+return true;
+}
+
+
+
+//var a = document.getElementById(telephoneNo).value;
+//var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+//if (filter.test(tmpTel)) {
+	//        return true;
+	 //   }
+	  //  else {
+	  //      return false;
+	  // }
+
+
+
+
+
+///if($("#telephoneNo").length <= 9 || $("#telephoneNo").length >= 11)
 //{
 //	return "insert 10 digts";
 //}
 
-
-return true;
-}
 
 //function validatePhone(telephoneNo) {
   //  var a = document.getElementById(telephoneNo).value;
@@ -227,7 +243,7 @@ return true;
 //convert to decimal price
 //$("#itemPrice").val(parseFloat(tmpPrice).toFixed(2));
 
-//if(tmpTel.length > 10 || temTel < 10){
+//if(tmpTel.length >= 11 || temTel.length <=9){
 	
 //	return "insert 10 digits";
 //}
