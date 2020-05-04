@@ -202,7 +202,7 @@ public class Hospital {
 		   preparedStmt.execute();    
 		   con.close(); 
 		 
-		  // output = "Updated successfully";  
+		   
 		   String newHospitals = readHospitalDetails();
 			 output = "{\"status\":\"success\", \"data\": \"" +
 					 newHospitals + "\"}"; 
@@ -211,7 +211,7 @@ public class Hospital {
 		  
 		  catch (Exception e)  
 		  {    
-			  //output = "Error while updating the hospital details.";    
+			    
 			  output = "{\"status\":\"error\", \"data\":\"Error while updating the hospital.\"}"; 
 			  System.err.println(e.getMessage());   
 			  
@@ -250,7 +250,7 @@ public class Hospital {
 		  preparedStmt.execute();    
 		  con.close(); 
 		
-		  //output = "Deleted successfully";   
+		  
 		  
 			String newHospitals = readHospitalDetails();
 			 output = "{\"status\":\"success\", \"data\": \"" + newHospitals + "\"}"; 
@@ -259,7 +259,7 @@ public class Hospital {
 		 }   catch (Exception e)   
 		 
 		 {    
-			 // output = "Error while deleting the hospital details.";   
+			    
 			  output = "{\"status\":\"error\", \"data\":\"Error while deleting the hospital.\"}"; 
 			  System.err.println(e.getMessage());   
 			  
