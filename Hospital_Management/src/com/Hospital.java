@@ -135,6 +135,7 @@ public class Hospital {
 			   String address = rs.getString("address"); 
 			   String telNo = rs.getString("telephoneNo"); 
 		   
+			   managerName = managerName.replace('+',' ');
 		    // Add into the html table     
 				output += "<tr><td><input id='hidHospitalIDUpdate' name='hidHospitalIDUpdate' type='hidden' "
 						+ "value='" + hospitalID + "'>" + MohCode + "</td>";     
