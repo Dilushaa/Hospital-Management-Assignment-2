@@ -12,7 +12,7 @@
 <script src="Components/hospitals.js"></script>
 
 </head>
-<body>
+<body  id="body">
 
 <div class="container">
 

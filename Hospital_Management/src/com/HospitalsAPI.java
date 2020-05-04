@@ -60,7 +60,7 @@ public class HospitalsAPI extends HttpServlet {
 		 String output = hospitalObj.updateHospitalDet(paras.get("hidHospitalIDSave").toString(),
 														 paras.get("mohCode").toString(),
 														 paras.get("hospitalName").toString(),
-														 paras.get("emailAddress").toString(),
+														 paras.get("emailAddress").toString().replace("%40","@"),
 														 paras.get("managerName").toString(),
 														 paras.get("address").toString(),
 														 paras.get("telephoneNo").toString());
