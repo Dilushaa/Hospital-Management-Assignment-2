@@ -124,7 +124,7 @@ public class Hospital {
 		   ResultSet rs = stmt.executeQuery(query); 
 		
 		
-		// iterate through the rows in the result set   
+		// iterate through the rows in the result sets   
 		   while (rs.next())    
 		   {    
 			   String hospitalID = Integer.toString(rs.getInt("hospitalID"));     
