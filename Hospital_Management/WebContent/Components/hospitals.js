@@ -6,6 +6,21 @@ if ($("#alertSuccess").text().trim() == "")
  $("#alertSuccess").hide();
  }
  $("#alertError").hide();
+ 
+ 
+ //$('#telephoneNo').blur(function(e) {
+   //  if (validatePhone('telephoneNo')) {
+ //        $('#spnPhoneStatus').text('Valid');
+         //$('#spnPhoneStatus').css('color', 'green');
+  //   }
+ //    else {
+       //  $('#spnPhoneStatus').text('Invalid');
+         //$('#spnPhoneStatus').css('color', 'red');
+ //    }
+ //});
+ 
+ 
+ 
 });
 
 
@@ -187,15 +202,35 @@ if (!$.isNumeric(tmpTel))
  return "Insert a numerical value for Telephone number.";
  }
 
-// convert to decimal price
- //$("#itemPrice").val(parseFloat(tmpPrice).toFixed(2));
 
- 
+
+//if($("#telephoneNo").length < 10 || $("#telephoneNo").length > 10)
+//{
+//	return "insert 10 digts";
+//}
 
 
 return true;
 }
 
+//function validatePhone(telephoneNo) {
+  //  var a = document.getElementById(telephoneNo).value;
+   // var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+   // if (filter.test(a)) {
+  //      return true;
+   // }
+   // else {
+  //      return false;
+  //  }
+//}
 
+//convert to decimal price
+//$("#itemPrice").val(parseFloat(tmpPrice).toFixed(2));
 
+//if(tmpTel.length > 10 || temTel < 10){
+	
+//	return "insert 10 digits";
+//}
 
+//var phone_pattern = /([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/; 
+//phone_pattern.test( telephoneNo );
