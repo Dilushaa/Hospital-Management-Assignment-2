@@ -177,19 +177,20 @@ if ($("#emailAddress").val().trim() == "")
  return "Insert Email Address.";
  }
 
-//
+
+//manager name
 if ($("#managerName").val().trim() == "")
 {
 return "Insert Manager Name.";
 }
 
-//
+//address
 if ($("#address").val().trim() == "")
 {
 return "Insert Address.";
 }
 
-//
+//telephone number 
 if ($("#telephoneNo").val().trim() == "")
 {
 return "Insert telephone number.";
@@ -203,50 +204,20 @@ if (!$.isNumeric(tmpTel))
  }
 
 
+// check for length
+
+var pattern = /^\d{10}$/;
+	
+if (!pattern.test(tmpTel)) 
+{
+		
+	return "Contact number should have 10 numbers";
+	
+}
+
 
 
 return true;
 }
 
 
-
-//var a = document.getElementById(telephoneNo).value;
-//var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
-//if (filter.test(tmpTel)) {
-	//        return true;
-	 //   }
-	  //  else {
-	  //      return false;
-	  // }
-
-
-
-
-
-///if($("#telephoneNo").length <= 9 || $("#telephoneNo").length >= 11)
-//{
-//	return "insert 10 digts";
-//}
-
-
-//function validatePhone(telephoneNo) {
-  //  var a = document.getElementById(telephoneNo).value;
-   // var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
-   // if (filter.test(a)) {
-  //      return true;
-   // }
-   // else {
-  //      return false;
-  //  }
-//}
-
-//convert to decimal price
-//$("#itemPrice").val(parseFloat(tmpPrice).toFixed(2));
-
-//if(tmpTel.length >= 11 || temTel.length <=9){
-	
-//	return "insert 10 digits";
-//}
-
-//var phone_pattern = /([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/; 
-//phone_pattern.test( telephoneNo );
