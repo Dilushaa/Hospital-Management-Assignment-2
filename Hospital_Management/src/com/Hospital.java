@@ -1,3 +1,5 @@
+
+
 package com;
 
 import java.sql.Connection;
@@ -108,7 +110,7 @@ public class Hospital {
 		   
 		 
 		   // Prepare the html table to be displayed    
-		output = "<table border='2'><tr>"
+		output = "<table border='3'><tr>"
 				+ "<th>MOH Code</th>"
 				+ "<th>Hospital Name</th>"
 				+ "<th>Email</th>"

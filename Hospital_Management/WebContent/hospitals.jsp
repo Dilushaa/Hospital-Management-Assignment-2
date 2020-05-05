@@ -13,7 +13,7 @@
 
 </head>
 <body  id="body">
-
+<div class= "imagetag"></div>
 <div class="container">
 
 	<div class="row">
@@ -21,29 +21,29 @@
 		<h1 id="head">HOSPITAL MANAGEMENT</h1>
 		<form id="formHospital" name="formHospital">
 			 
-			 MOH code:
+			 <b>MOH code:</b>
 			 <input id="mohCode" name="mohCode" type="text" placeholder="moh1234"
 			 class="form-control form-control-sm">
 			 
-			 <br> Hospital name:
+			 <br> <b>Hospital name:</b>
 			 <input id="hospitalName" name="hospitalName" type="text" placeholder="Asiri"
 			 class="form-control form-control-sm">
 			 
-			 <br> Email Address:
+			 <br><b>Email Address:</b>
 			 <input id="emailAddress" name="emailAddress" type="text" placeholder="abc@gmail.com"
 			 class="form-control form-control-sm">
 			 
-			 <br> Manager Name:
+			 <br><b>Manager Name:</b> 
 			 <input id="managerName" name="managerName" type="text" placeholder="MR.ABC"
 			 class="form-control form-control-sm">
 			 
 			 
-			  <br> Address:
+			  <br><b> Address:</b>
 			 <input id="address" name="address" type="text" placeholder="colombo"
 			 class="form-control form-control-sm">
 			 
 			 
-			  <br> Telephone NO:
+			  <br><b>Telephone NO:</b> 
 			 <input id="telephoneNo" name="telephoneNo" type="text" placeholder="011-xxxxxxx"
 			 class="form-control form-control-sm">
 			 <br>
